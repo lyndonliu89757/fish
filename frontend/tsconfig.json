@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true
+  },
+  "extends": "./src/.umi/tsconfig.json"
+}
