@@ -4,16 +4,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const style = document.createElement("style");
   style.textContent = `
-      ::-webkit-scrollbar {
-        width: 0 !important;
-        height: 0 !important;
-        background: transparent;
-      }
-      body, div, iframe, * {
-        scrollbar-width: none !important; /* Firefox */
-        -ms-overflow-style: none !important; /* IE 10+ */
-        overflow: -moz-scrollbars-none !important; /* Older FF */
-      }
+/*Webkit 内核 (Chrome, Safari):*/
+body::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+/*Gecko 内核 (firefox):*/
+body {
+  scrollbar-width: none;
+}
+/*IE内核 (IE, Edge):*/
+body {
+  -ms-overflow-style:none;
+}
     `;
   document.head.appendChild(style);
 
